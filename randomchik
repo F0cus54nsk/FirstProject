@@ -13,10 +13,12 @@ public class Solution {
         String s = reader.readLine(); //читаем строку с клавиатуры
         int n = Integer.parseInt(s); //преобразовываем строку в число.
         int g = a + (int) (Math.random()* b); // Генерация числа
-        if (n == g)
+        if (n == g) {
             System.out.println("Блин, ты счастливчик !!! Случайное число, которое я загадал: " + g);
-        else
-        System.out.println("Увы, ты не угадал =( Случайное число, которое я загадал: " + g );
+        }
+        else {
+            System.out.println("Увы, ты не угадал =( Случайное число, которое я загадал: " + g );
+        }
     }
 
 }

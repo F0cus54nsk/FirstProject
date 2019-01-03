@@ -1,14 +1,22 @@
 package randomchik;
 
 
+import java.io.*;
+
 public class Solution {
 
-    public static void main(String[] args) {
-        int min = 0;
-        int max = 101; // Потому что вероятность что  Math.random выдаст 1, крайне мала )))
-        int random_number = min + (int) (Math.random()* max); // Генерация числа
-        System.out.println("Случайное число, которое я загадал: " + random_number);
-
+    public static void main(String[] args) throws Exception {
+        int a = 0;
+        int b = 101; // Пример 100 пишем, 101 потому что вероятность что  Math.random выдаст 1, крайне мала )))
+        System.out.println("Введи любое число от " + a + " до " + (b - 1));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String s = reader.readLine(); //читаем строку с клавиатуры
+        int n = Integer.parseInt(s); //преобразовываем строку в число.
+        int g = a + (int) (Math.random()* b); // Генерация числа
+        if (n == g)
+            System.out.println("Блин, ты счастливчик !!! Случайное число, которое я загадал: " + g);
+        else
+        System.out.println("Увы, ты не угадал =( Случайное число, которое я загадал: " + g );
     }
 
 }

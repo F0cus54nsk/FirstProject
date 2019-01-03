@@ -6,9 +6,9 @@ import java.io.*;
 public class Solution {
 
     public static void main(String[] args) throws Exception {
-        int a = 0;
-        int b = 101; // Пример 100 пишем, 101 потому что вероятность что  Math.random выдаст 1, крайне мала )))
-        System.out.println("Введи любое число от " + a + " до " + (b - 1));
+        int a = 1;
+        int b = 100;
+        System.out.println("Введи любое число от " + a + " до " + b);
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine(); //читаем строку с клавиатуры
         int n = Integer.parseInt(s); //преобразовываем строку в число.
